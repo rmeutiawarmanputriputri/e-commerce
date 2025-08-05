@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart with Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Main Nav -->
+<div class="bg-[#FFD6BA] px-6 py-6 flex items-center justify-between shadow-sm sticky top-0 z-50">
+  
+  <!-- Menu -->
+  <nav class="flex gap-8 text-base font-semibold tracking-wide uppercase">
+    <a href="home.html" class="text-black hover:border-b-2 hover:border-black pb-1">Home</a>
+    <a href="#" class="text-black hover:border-b-2 hover:border-black pb-1">Man</a>
+    <a href="#" class="text-black hover:border-b-2 hover:border-black pb-1">Woman</a>
+    <a href="#" class="text-black hover:border-b-2 hover:border-black pb-1">Sale</a>
+  </nav>
+
+  <!-- Right Section -->
+  <div class="flex items-center space-x-8">
+    
+    <!-- Search -->
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Search"
+            class="pl-9 pr-3 py-1.5 w-[180px] bg-gray-200 text-sm rounded-md focus:outline-none"
+          />
+          <svg class="absolute left-2.5 top-2.5 w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+               stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 3.5a7.5 7.5 0 0013.15 13.15z" />
+          </svg>
+        </div>
+
+    <!-- Cart Icon -->
+    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24 ">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.2 6m12.2-6l1.2 6M6 19a1 1 0 102 0 1 1 0 00-2 0zm10 0a1 1 0 102 0 1 1 0 00-2 0z" />
+    </svg>
+
+    <!-- Avatar -->
+    <div class="relative group">
+      <img src="Img/baby lomon 🤏🏻 1.png" alt="avatar" class="w-9 h-9 rounded-full object-cover"/>
+      <div class="absolute right-0 mt-2 w-48 bg-gray-700 text-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
+        <ul class="py-2 text-sm">
+          <li><a href="profile.html" class="block px-4 py-2 hover:bg-gray-600">Manage My Account</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Order</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Cancellations</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Reviews</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </header>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+    <!-- Cart Items -->
+    <div id="cart-items" class="md:col-span-2 space-y-4"></div>
+
+    <!-- Order Summary -->
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-lg font-semibold mb-4">Jumlah Pesanan</h2>
+      <div class="flex justify-between mb-2">
+        <span>Subtotal(2 produk)</span>
+        <span id="subtotal" class="font-semibold">Rp. 0</span>
+      </div>
+      <div class="flex justify-between mb-2">
+        <span>Pengiriman</span>
+        <span class="text-gray-500 text-sm">Dari LUMINOX</span>
+      </div>
+      <div class="flex justify-between font-semibold text-lg border-t pt-2">
+        <span>Total</span>
+        <span id="total">Rp. 0</span>
+      </div>
+      <button id="checkoutBtn" class="w-full bg-[#FFDCDC] hover:bg-white text-black py-2 rounded">
+        Checkout
+      </button>
+    </div>
+  </div>
+
+  <script src="../script/Cart.js"></script>
+</body>
+<!-- Footer -->
+    <footer class="bg-[#FFD6BA] text-black mt-20 py-12 px-6">
+      <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 text-sm">
+        <div>
+          <h5 class="font-bold mb-2">Exclusive</h5>
+          <p>Subscribe</p>
+          <p class="text-gray-400">Get 10% off your first order</p>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="mt-2 px-3 py-1 rounded text-black w-full"
+          />
+        </div>
+        <div>
+          <ul class="space-y-1">
+            <li>Pertanyyan Umum</li>
+            <li>Kebijakan Retur</li>
+            <li>Hubungi Kami</li>
+             <li>Ketentuan Pengguna</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-2">Tentang Lumino.id</h5>
+          <ul class="space-y-1">
+            <li>Perusahaan</li>
+            <li>erita Perusahaan</li>
+            <li>Pusat siara Pres</li>
+            <li>Investor</li>
+            <li>Karir</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="space-y-1">
+            <li>Ios</li>
+            <li>Android</li>
+            <li>windows</li>
+            <li>MacOS</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../script/Cart.js"></script>
+</body>
+</html>

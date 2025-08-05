@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home page</title>
+  <script src="script.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"  rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">   
+  <link rel="preconnect" href="https://fonts.gstatic.com"  crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-black min-h-screen flex flex-col">
+
+  <!-- Strip atas dengan logo -->
+  <div class="bg-pink h-[90px] flex items-center px-8">   
+    <h1 class="text-[#807778] text-5xl" style="font-family: 'Luxurious Script';">Sora</h1>
+  </div>
+
+  <!-- Main Nav -->
+  <div class="bg-white px-6 py-6 flex items-center justify-between shadow-sm sticky top-0 z-50">
+    <nav class="flex gap-8 text-base font-semibold tracking-wide uppercase">
+      <a href="#" class="hover:border-b-2 hover:border-black pb-1">Home</a>
+      <a href="#" class="hover:border-b-2 hover:border-black pb-1">Man</a>
+      <a href="#" class="hover:border-b-2 hover:border-black pb-1">Woman</a>
+      <a href="#" class="hover:border-b-2 hover:border-black pb-1">Sale</a>
+    </nav>
+    <div class="flex items-center space-x-8">
+      <!-- Search -->
+      <div class="relative">
+        <input
+          type="text"
+          placeholder="Search"
+          class="pl-9 pr-3 py-1.5 w-[180px] bg-gray-200 text-sm rounded-md focus:outline-none"
+        />
+        <svg class="absolute left-2.5 top-2.5 w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+             stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 3.5a7.5 7.5 0 0013.15 13.15z" />
+        </svg>
+      </div>
+
+      <!-- Cart Icon -->
+      <a href="cart.html" id="cart-icon" class="relative inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.2 6M17 13l1.2 6M6 19a1 1 0 100 2 1 1 0 000-2zm12 0a1 1 0 100 2 1 1 0 000-2z" />
+        </svg>
+        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5">0</span>
+      </a>
+
+      <!-- Avatar -->
+      <div class="relative group">
+        <img src="Img/baby lomon 🤏🏻 1.png" alt="avatar" class="w-9 h-9 rounded-full object-cover"/>
+        <div class="absolute right-0 mt-2 w-48 bg-gray-700 text-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
+          <ul class="py-2 text-sm">
+            <li><a href="profile.html" class="block px-4 py-2 hover:bg-gray-600">Manage My Account</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Order</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Cancellations</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Reviews</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Konten utama -->
+  <main class="flex-grow">
+    <!-- Carousel -->
+    <div id="carousel" class="overflow-hidden relative">
+      <div id="slides" class="flex transition-transform duration-500">
+        <div class="w-full flex-shrink-0 flex items-center justify-center">
+          <img src="Img/Coming Soon Website (4).png" alt="Ring 1" class="mx-auto h-90" />
+        </div>
+        <div class="w-full flex-shrink-0 bg-gray-300 flex items-center justify-center">
+          <img src="Img/Benner jaket.png" alt="Ring 2" />
+        </div>
+        <div class="w-full flex-shrink-0 bg-gray-300 flex items-center justify-center">
+          <img src="Img/" alt="Ring 3" />
+        </div>
+      </div>
+      <!-- Carousel Buttons -->
+      <button id="prev" class="absolute left-0 top-3/4 -translate-y-1/2 bg-white rounded-full p-4 shadow-md">←</button>
+      <button id="next" class="absolute right-0 top-3/4 -translate-y-1/2 bg-white rounded-full p-4 shadow-md">→</button>
+    </div>
+
+    <!-- Trending Section -->
+    <section class="p-6">
+      <h2 class="text-2xl font-semibold mb-2">Trending Styles</h2>
+      <div id="product-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <!-- Card akan ditambahkan via JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#FFD6BA] text-black px-6 py-10 w-full" style="background-color: #FFD6BA;">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+      <!-- Kolom 1 -->
+      <div>
+        <h5 class="font-bold mb-2">Exclusive</h5>
+        <p class="mb-1">Subscribe</p>
+        <input type="email" placeholder="Enter your email" class="mt-1 px-3 py-2 rounded text-black bg-[#FCD9D9] w-full"/>
+      </div>
+      <!-- Kolom 2 -->
+      <div>
+        <ul class="space-y-1">
+          <li>Promosi Dan Diskon</li>
+          <li>Kebijakan Privasi</li>
+          <li>Ketentuan Pengguna</li>
+          <li>Ketentuan Pembelian</li>
+        </ul>
+      </div>
+      <!-- Kolom 3 -->
+      <div>
+        <h5 class="font-bold mb-2">TENTANG SORA</h5>
+        <ul class="space-y-1">
+          <li>Perusahaan</li>
+          <li>Berita Perusahaan</li>
+          <li>Pusat Siaran Pres</li>
+          <li>Investor</li>
+          <li>Karir</li>
+        </ul>
+      </div>
+      <!-- Kolom 4 -->
+      <div>
+        <h5 class="font-bold mb-2">DOWNLOAD</h5>
+        <ul class="space-y-1">
+          <li>iOS</li>
+          <li>Android</li>
+          <li>Windows</li>
+          <li>MacOS</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- Script -->
+  <script src="../script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Produk</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-[#f5eded] min-h-screen">
+
+  <!-- Navbar -->
+  <div class="py-6 flex items-center justify-between shadow-sm sticky top-0 z-50" style="background-color: #FFD6BA;">
+    <!-- Menu -->
+    <nav class="flex gap-8 text-base font-semibold tracking-wide uppercase ml-6">
+      <a href="home.html" class="text-black hover:border-b-2 hover:border-black pb-1">Home</a>
+      <a href="#" class="text-black hover:border-b-2 hover:border-black pb-1">Man</a>
+      <a href="#" class="text-black hover:border-b-2 hover:border-black pb-1">Woman</a>
+      <a href="#" class="text-black hover:border-b-2 hover:border-black pb-1">Sale</a>
+    </nav>
+
+    <!-- Right Section -->
+    <div class="flex items-center space-x-8 mr-6">
+      <!-- Search -->
+      <div class="relative">
+        <input
+          type="text"
+          placeholder="Search"
+          class="pl-9 pr-3 py-1.5 w-[180px] bg-gray-200 text-sm rounded-md focus:outline-none"
+        />
+        <svg class="absolute left-2.5 top-2.5 w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+             stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 3.5a7.5 7.5 0 0013.15 13.15z" />
+        </svg>
+      </div>
+
+      <!-- Cart Icon -->
+      <div class="relative">
+        <a href="cart.html" class="relative inline-block">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.2 6M17 13l1.2 6M6 19a1 1 0 100 2 1 1 0 000-2zm12 0a1 1 0 100 2 1 1 0 000-2z" />
+          </svg>
+          <span id="cart-count"
+            class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">0</span>
+        </a>
+      </div>
+
+      <!-- Avatar -->
+      <div class="relative group">
+        <img src="Img/baby lomon 🤏🏻 1.png" alt="avatar" class="w-9 h-9 rounded-full object-cover"/>
+        <div class="absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
+          <ul class="py-2 text-sm">
+            <li><a href="profile.html" class="block px-4 py-2 hover:bg-gray-600">Manage My Account</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Order</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Cancellations</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">My Reviews</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Container -->
+  <div class="flex justify-center mt-10 px-4">
+    <div id="product-container" class="bg-white shadow border border-gray-300 p-6 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl rounded">
+      <!-- Akan diisi oleh JavaScript -->
+    </div>
+  </div>
+<!-- Footer -->
+<footer class="bg-gray-200 text-black py-12 px-6">
+  <div class="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+    
+    <!-- Kolom 1 -->
+    <div>
+      <h5 class="font-bold mb-2">Exclusive</h5>
+      <p>Subscribe</p>
+      <input type="email" placeholder="Enter your email" class="mt-2 px-3 py-2 rounded text-black bg-pink-100 w-full"/>
+    </div>
+
+    <!-- Kolom 2 -->
+    <div>
+      <ul class="space-y-1">
+        <li>Promosi Dan Diskon</li>              
+        <li>Kebijakan Privasi</li>
+        <li>Ketentuan Pengguna</li>
+        <li>Ketentuan Pembelian</li>
+      </ul>
+    </div>
+
+    <!-- Kolom 3 -->
+    <div>
+      <h5 class="font-bold mb-2">TENTANG SORA</h5>
+      <ul class="space-y-1">
+        <li>Perusahaan</li>
+        <li>Berita Perusahaan</li>
+        <li>Pusat Siaran Pres</li>
+        <li>Investor</li>
+        <li>Karir</li>
+      </ul>
+    </div>
+
+    <!-- Kolom 4 -->
+    <div>
+      <h5 class="font-bold mb-2">DOWNLOAD</h5>
+      <ul class="space-y-1">
+        <li>iOS</li>
+        <li>Androit</li>
+        <li>Windows</li>
+        <li>MacOS</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  <!-- Script -->
+  <script src="../script/detail.js"></script>
+</body>
+</html>

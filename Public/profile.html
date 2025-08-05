@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="profile.js" defer></script>
+</head>
+<body class="bg-[#FFD6BA] font-sans min-h-screen flex items-center justify-center">
+
+  <div class="w-full max-w-md bg-[#FFD6BA] p-6">
+    <!-- Header -->
+    <div class="flex justify-between items-center border-b border-black pb-2 mb-4">
+      <div class="flex items-center gap-2">
+        <img src="https://i.pravatar.cc/40" class="w-6 h-6 rounded-full" />
+        <span class="text-sm font-semibold">Profile</span>
+      </div>
+      <button id="editBtn" class="text-sm font-semibold text-black hover:underline">Edit</button>
+    </div>
+
+    <!-- Form -->
+    <form id="profileForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium">Nama Lengkap</label>
+        <input type="text" id="fullName" class="w-full mt-1 border border-gray-400 rounded px-3 py-2" disabled />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">E-mail</label>
+        <input type="email" id="email" class="w-full mt-1 border border-gray-400 rounded px-3 py-2" disabled />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Birthday</label>
+        <input type="date" id="birthday" class="w-full mt-1 border border-gray-400 rounded px-3 py-2" disabled />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Kata Sandi</label>
+        <input type="password" id="password" class="w-full mt-1 border border-gray-400 rounded px-3 py-2" disabled />
+      </div>
+
+      <button type="submit" id="saveBtn" class="bg-[#FFDCDC] text-black font-semibold px-4 py-2 w-full rounded hover:bg-[#ffcfcf] hidden">
+        SIMPAN
+      </button>
+    </form>
+
+    <!-- Logout -->
+    <button id="logoutBtn" class="flex items-center gap-2 text-xs text-black mt-4 hover:text-red-600">
+      <span>⇦</span>
+      <span>Log Out</span>
+    </button>
+  </div>
+  <script src="../script/profile.js"></script>
+</body>
+</html>

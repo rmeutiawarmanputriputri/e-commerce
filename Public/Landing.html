@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+</head>
+
+<body class="m-0 p-0 font-sans bg-white text-black">
+
+  <!-- Strip atas dengan logo -->
+  <div class="bg-[#FFD6BA] h-[90px] flex items-center px-8">
+    <h1 class="text-[#807778] text-5xl" style="font-family: 'Luxurious Script';">Sora</h1>
+  </div>
+
+  <!-- Main Nav -->
+  <div class="bg-white px-6 py-6 flex items-center justify-between shadow-sm sticky top-0 z-50">
+    <nav class="flex gap-8 text-base font-semibold tracking-wide uppercase">
+      <a href="home.html" class="hover:border-b-2 hover:border-black pb-1">Home</a>
+      <a href="#" class="hover:border-b-2 hover:border-black pb-1">Man</a>
+      <a href="#" class="hover:border-b-2 hover:border-black pb-1">Woman</a>
+      <a href="#" class="hover:border-b-2 hover:border-black pb-1">Sale</a>
+    </nav>
+
+    <div class="flex items-center space-x-6">
+      <div class="relative">
+        <input type="text" placeholder="Search" class="pl-9 pr-3 py-1.5 w-[180px] bg-gray-200 text-sm rounded-md focus:outline-none" />
+        <svg class="absolute left-2.5 top-2.5 w-4 h-4 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 3.5a7.5 7.5 0 0013.15 13.15z" />
+        </svg>
+      </div>
+      <a href="login.html" class="text-sm text-gray-800">Login</a>
+      <a href="register.html" class="text-sm text-gray-800">Register</a>
+      <a href="#" aria-label="Cart">
+        <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9M9 21a1 1 0 100-2 1 1 0 000 2zm6 0a1 1 0 100-2 1 1 0 000 2z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="relative bg-white">
+    <img src="Img/putih.png"Model class="w-full"/>
+  </div>
+
+  <!-- Trending Styles -->
+ <div class="mt-10 overflow-x-auto">
+  <div class="flex gap-4 sm:gap-6 px-2 sm:px-10 min-w-max">
+      <div>
+        <h2 class="text-2xl font-bold">Trending Styles</h2>
+        <p class="text-sm text-gray-600 mt-1">Trending Styles &rarr;</p>
+      </div>
+    </div>
+
+    <div class="relative flex items-center">
+      <button class="absolute left-0 z-10 bg-white border border-black rounded-full w-8 h-8 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <div class="flex gap-6 mx-auto overflow-hidden px-10">
+        <div class="w-40 h-40 bg-white rounded overflow-hidden hover:scale-105 transition-transform duration-300">
+          <img src="Img/elea.png" alt="Product 1" class="w-full h-full object-cover">
+        </div>
+        <div class="w-40 h-40 bg-white rounded overflow-hidden hover:scale-105 transition-transform duration-300">
+          <img src="Img/dream.png" alt="Product 2" class="w-full h-full object-cover">
+        </div>
+        <div class="w-40 h-40 bg-white rounded overflow-hidden hover:scale-105 transition-transform duration-300">
+          <img src="Img/gentle woman.png" alt="Product 3" class="w-full h-full object-cover">
+        </div>
+        <div class="w-40 h-40 bg-white rounded overflow-hidden hover:scale-105 transition-transform duration-300">
+          <img src="Img/rarebeauty.png" alt="Product 4" class="w-full h-full object-cover">
+        </div>
+        <div class="w-40 h-40 bg-white rounded overflow-hidden hover:scale-105 transition-transform duration-300">
+          <img src="Img/gentlewomancoklat.png" alt="Product 5" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <button class="absolute right-0 z-10 bg-white border border-black rounded-full w-8 h-8 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="mt-40 pt-10">
+    <div class="flex flex-col md:flex-row items-center gap-6">
+      <img src="Img/Group 354.png" alt="Model Sepatu" class="w-63 object-cover">
+      <div class="max-w-md text-center md:text-left">
+        <h2 class="text-lg font-medium font-bold uppercase">HMNS x Tsana - Elea</h2>
+        <p class="text-sm text-gray-700 mt-2">
+          Sebuah kolaborasi spesial antara HMNS x Tsana (Rintik Sedu), Elea adalah sosok yang menemani, melindungi, dan memberikan kehangatan dalam setiap langkahmu.
+        </p>
+        <button class="mt-4 bg-[#FFDCDC] text-black py-3 px-4 font-semibold rounded shadow">SHOP NOW</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Products Section -->
+<section class="max-w-6xl mx-auto py-12 px-4 text-center">
+  <h2 class="text-3xl font-bold mb-10">ALL PRODUCTS</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <!-- Card Produk -->
+    <div class="bg-gray-100 rounded-xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+      <img src="Img/new balance.png" alt="New Balance" class="mx-auto w-40 h-32 object-contain mb-4">
+      <p class="font-semibold">New Balance<br>Unisex Sneakers<br>Shoes Silver</p>
+      <p class="text-red-600 font-bold text-lg">1.555.000</p>
+      <p class="text-gray-400 line-through text-sm">2.100.000</p>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+      <img src="Img/produk.png" alt="Speedcat OG" class="mx-auto w-40 h-32 object-contain mb-4">
+      <p class="font-semibold">Sepatu Speedcat OG<br>Unisex Sneakers</p>
+      <p class="text-red-600 font-bold text-lg">1.555.000</p>
+      <p class="text-gray-400 line-through text-sm">2.100.000</p>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+      <img src="Img/produk.png" alt="Speedcat OG" class="mx-auto w-40 h-32 object-contain mb-4">
+      <p class="font-semibold">Sepatu Speedcat OG<br>Unisex Sneakers</p>
+      <p class="text-red-600 font-bold text-lg">1.555.000</p>
+      <p class="text-gray-400 line-through text-sm">2.100.000</p>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+      <img src="Img/produk.png" alt="New Balance" class="mx-auto w-40 h-32 object-contain mb-4">
+      <p class="font-semibold">New Balance<br>Unisex Sneakers<br>Shoes Silver</p>
+      <p class="text-red-600 font-bold text-lg">1.555.000</p>
+      <p class="text-gray-400 line-through text-sm">2.100.000</p>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+      <img src="Img/produk.png" alt="Speedcat OG" class="mx-auto w-40 h-32 object-contain mb-4">
+      <p class="font-semibold">Sepatu Speedcat OG<br>Unisex Sneakers</p>
+      <p class="text-red-600 font-bold text-lg">1.555.000</p>
+      <p class="text-gray-400 line-through text-sm">2.100.000</p>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+      <img src="Img/produk.png" alt="Speedcat OG" class="mx-auto w-40 h-32 object-contain mb-4">
+      <p class="font-semibold">Sepatu Speedcat OG<br>Unisex Sneakers</p>
+      <p class="text-red-600 font-bold text-lg">1.555.000</p>
+      <p class="text-gray-400 line-through text-sm">2.100.000</p>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+      <img src="Img/produk.png" alt="Speedcat OG" class="mx-auto w-40 h-32 object-contain mb-4">
+      <p class="font-semibold">Sepatu Speedcat OG<br>Unisex Sneakers</p>
+      <p class="text-red-600 font-bold text-lg">1.555.000</p>
+      <p class="text-gray-400 line-through text-sm">2.100.000</p>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+      <img src="Img/produk.png" alt="Speedcat OG" class="mx-auto w-40 h-32 object-contain mb-4">
+      <p class="font-semibold">Sepatu Speedcat OG<br>Unisex Sneakers</p>
+      <p class="text-red-600 font-bold text-lg">1.555.000</p>
+      <p class="text-gray-400 line-through text-sm">2.100.000</p>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg">
+      <img src="Img/produk.png" alt="Speedcat OG" class="mx-auto w-40 h-32 object-contain mb-4">
+      <p class="font-semibold">Sepatu Speedcat OG<br>Unisex Sneakers</p>
+      <p class="text-red-600 font-bold text-lg">1.555.000</p>
+      <p class="text-gray-400 line-through text-sm">2.100.000</p>
+    </div>
+  </div>
+
+  <!-- Lihat Selengkapnya -->
+  <a href="login.html" class="block mt-8 text-sm font-semibold underline hover:text-gray-600 transition duration-200">Lihat Selengkapnya</a>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#FFD6BA] text-black mt-20 py-12 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 text-sm">
+      <div>
+        <h5 class="font-bold text-black mb-2">Exclusive</h5>
+        <p>Subscribe</p>
+        <p class="text-black">Get 10% off your first order</p>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          lass="mt-6 px-10 py-1 text-black rounded  w-full"
+        />
+      </div>
+      <div>
+        <ul class="space-y-1 ">
+          <li>Pertanyyan Umum</li>
+          <li>Kebijakan Retur</li>
+          <li>Hubungi Kami</li>
+          <li>Ketentuan Pengguna</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-2 text-black">Tentang Lumino.id</h5>
+        <ul class="space-y-1 text-black">
+          <li>Perusahaan</li>
+          <li>Berita Perusahaan</li>
+          <li>Pusat siaran Pers</li>
+          <li>Investor</li>
+          <li>Karir</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="space-y-1 text-black">
+          <li>iOS</li>
+          <li>Android</li>
+          <li>Windows</li>
+          <li>MacOS</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

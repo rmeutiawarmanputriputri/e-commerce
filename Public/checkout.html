@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Pembayaran</title>
+  <script src="checkout.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+
+<!-- Overlay Payment Form -->
+<div id="paymentOverlay" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg w-full h-full p-6 flex flex-col md:flex-row gap-6">
+    <!-- Form Pembeli -->
+    <div class="flex-1 space-y-4">
+      <h2 class="text-xl font-semibold">Informasi Pembeli</h2>
+      <input type="text" id="nama" placeholder="Nama" class="w-full border rounded px-4 py-2" />
+      <input type="text" id="alamat" placeholder="Alamat" class="w-full border rounded px-4 py-2" />
+      <input type="text" id="telepon" placeholder="Nomor Telepon" class="w-full border rounded px-4 py-2" />
+
+      <h3 class="font-semibold mt-4">Metode Pembayaran</h3>
+      <div class="flex items-center gap-4">
+        <label class="flex items-center gap-2">
+          <input type="radio" name="paymentMethod" value="BCA" />
+          <img src="Img/LOGO BCA.png" alt="BCA" class="h-6" />
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="radio" name="paymentMethod" value="BSI" />
+          <img src="Img/LOGI BSI.png" alt="BSI" class="h-6" />
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="radio" name="paymentMethod" value="BSI" />
+          <img src="Img/BRI.png" alt="BSI" class="h-6" />
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="radio" name="paymentMethod" value="BSI" />
+          <img src="Img/LOGI BSI.png" alt="BSI" class="h-6" />
+        </label>
+      </div>
+    </div>
+
+    <!-- Ringkasan Order -->
+    <div class="bg-gray-100 p-4 rounded-lg w-full md:w-80 space-y-3">
+      <h2 class="text-xl font-semibold">Ringkasan Order</h2>
+      <p>Total: <span id="totalHarga" class="font-bold">Rp -</span></p>
+      <p>Waktu: <span id="waktuSekarang">-</span></p>
+      <p>Tanggal Pengiriman: <span id="tanggalPengiriman">-</span></p>
+      <button onclick="submitPembayaran()" class="w-full bg-pink-200 text-black py-2 rounded hover:bg-[#FFD6BA]">BAYAR</button>
+    </div>
+  </div>
+</div>
+
+<!-- Popup Sukses -->
+<div class="text-center max-w-xxl mx-auto">
+  <!-- Gambar ilustrasi -->
+  <img src="Img/peyment.png" alt="Payment Success" class="mx-auto w-80 h-auto mb-6" />
+
+  <!-- Pesan -->
+  <p class="text-2xl text-gray-800 font-light leading-relaxed">
+    Payment success, thank you for ordering from <span class="font-medium">Sora</span>,<br>
+    have a nice day
+  </p>
+
+  <!-- Tombol kembali ke home -->
+  <a href="./home.html" class="mt-6 inline-block bg-pink-100 text-gray-800 text-lg px-6 py-2 rounded-xl hover:bg-pink-200 transition">
+    Back to home
+  </a>
+</div>
+<script src="../script/checkout.js"></script>
+</body>
+</html>
